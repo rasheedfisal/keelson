@@ -1,0 +1,23 @@
+{
+  "stacks": {
+    "nextjs-nestjs": [
+      "core",
+      "stacks/nextjs",
+      "stacks/nestjs",
+      "data/postgres",
+      "data/drizzle"
+    ],
+    "nextjs-dotnet": [
+      "core",
+      "stacks/nextjs",
+      "stacks/dotnet",
+      "data/postgres",
+      "data/efcore-dapper"
+    ]
+  },
+  "modes": {
+    "new": ["modes/new"],
+    "existing": ["modes/existing"],
+    "migration": ["modes/migration"]
+  }
+}
