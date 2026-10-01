@@ -30,6 +30,26 @@ Skills are written to `.agents/skills/` and mirrored to `.cursor/skills/`. A `.k
 - Node.js 22.18 or newer
 - A target directory. An empty folder is enough. The application code can arrive later.
 
+## Use the published package
+
+After the package is on npm:
+
+```powershell
+npx @rasheedfaisal/keelson init --dir E:\path\to\your-app
+```
+
+A global install is `npm install -g @rasheedfaisal/keelson`. Then `keelson init` runs without `npx`.
+
+## Publish
+
+From a checkout of this repository, after `npm login`:
+
+```powershell
+npm publish
+```
+
+`prepublishOnly` runs the tests and the build. The published package includes `dist/cli.js`, `templates/`, and `layers.json`. The npm name is `@rasheedfaisal/keelson`. The command installed by a global install is still `keelson`. Bump `version` in `package.json` before each later publish. A GitHub push alone does not update `npx @rasheedfaisal/keelson`.
+
 ## Use it from this repository
 
 ```powershell
